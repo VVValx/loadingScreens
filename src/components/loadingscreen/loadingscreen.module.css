@@ -1,11 +1,4 @@
 .container {
-  height: 100vh;
-  position: relative;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.circleContainer {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -15,10 +8,14 @@
   justify-content: center;
 }
 
+.loadType {
+  margin: 0 10px;
+}
+
 .circle {
-  height: 10px;
-  width: 10px;
-  background: blue;
+  height: 8px;
+  width: 8px;
+  background: #778899;
   border-radius: 50%;
   display: inline-block;
 }
@@ -43,6 +40,15 @@
   animation: four 1s infinite ease-in-out;
   animation-delay: 0.3s;
   animation-fill-mode: backwards;
+}
+
+.spin {
+  width: 30px;
+  border-top: 4px solid #cd5c5c;
+  border-bottom: 4px solid #f08080;
+  height: 30px;
+  border-radius: 50%;
+  animation: spin 1s ease-out infinite;
 }
 
 @keyframes fs {
@@ -98,5 +104,19 @@
 
   100% {
     transform: translateY(-29px);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
